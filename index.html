@@ -855,25 +855,26 @@
             <form action="" method="post" role="form" class="php-email-form" id="submit-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" >
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" >
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="number" id="number" placeholder="Your Number" required>
+                <input type="text" class="form-control" name="number" id="number" placeholder="Your Number" >
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" >
               </div>
 
           <br>
-              <div class="text-center">
-                <button type="submit">Send Message</button>
-              </div>
+              
             </form>
-          
+            <div class="text-center">
+              <a href="https://api.whatsapp.com/send/?phone=918089848080&text&type=phone_number&app_absent=0">
+              <button type="submit" style="background-color: #45505b;color: white;height: 50px;width: 170px;border-radius: 20px;border: transparent;">Send Message</button></a>
+            </div>
 
           </div>
 
@@ -906,27 +907,7 @@
  
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <script src="js/scripts.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("#submit-form").submit(function (e) {
-        e.preventDefault();
-        $.ajax({
-          url: "https://script.google.com/macros/s/AKfycbxnrfr0SYMgoqCIcopOgszTrTx9mJmkUusk2LYIBZdhsLkm-XOd_Ejaz4-F8tKbr447DQ/exec",
-          data: $("#submit-form").serialize(),
-          method: "post",
-          success: function (response) {
-            alert("Form submitted successfully");
-            // Optionally, you can reload or redirect after submission
-            window.location.reload();
-            // window.location.href = "https://google.com";
-          },
-          error: function (err) {
-            alert("Something went wrong. Please try again later.");
-          }
-        });
-      });
-    });
-  </script>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
